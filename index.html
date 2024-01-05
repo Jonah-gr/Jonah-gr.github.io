@@ -1,65 +1,154 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            HSD DAISY Website
-        </title>
-    </head>
-    <body>
-        <h1>
-            Erste Überschrift
-        </h1>
-        <h2>
-            Zweite Überschrift
-        </h2>
-        <p>
-            Hier ist ein wenig Text.
-        </p>
-        <table>
-            <tr>
-                <th>
-                    Spalte 1
-                </th>
-                <th>
-                    Spalte 2
-                </th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-            </tr>
-        </table>
-        <div>
-            <label>Name:</label>&nbsp;
-            <input name="Name" maxlength="20" type="text"/>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonah Gräfe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Additional styling for German content */
+        section#persoenlicheDaten,
+        section#beruflicherWerdegang,
+        section#ausbildung,
+        section#weitereTaetigkeiten,
+        section#kenntnisse,
+        section#hobbys {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="color: white;">Jonah Gräfe</h1>
+        <p style="color: lightgray;">Student für Data Science, AI und Intelligente Systeme</p>
+    </header>
+
+    <section id="persoenlicheDaten">
+        <h2>Persönliche Daten</h2>
+        <p><strong>Name:</strong> Jonah Gräfe</p>
+        <p><strong>Adresse:</strong> Friedrichstraße 28B, 40217 Düsseldorf</p>
+        <p><strong>Telefon:</strong> 01512 8355784</p>
+        <p><strong>E-Mail:</strong> Jonah.graefe@study.hs.duesseldorf.de</p>
+        <p><strong>Geburtsdatum/-ort:</strong> 21.07.2002 in Senden</p>
+        <p><strong>Familienstand:</strong> ledig</p>
+    </section>
+
+    <section id="beruflicherWerdegang">
+        <h2>Beruflicher Werdegang</h2>
+
+        <div class="job">
+            <h3>09/2023 – aktuell</h3>
+            <p>Tutor an der Hochschule Düsseldorf</p>
         </div>
-        <div>
-            <label>Vorname:</label>&nbsp;
-            <input name="Vorname" maxlength="20" type="text"/>
+
+        <div class="job">
+            <h3>05/2023 - 08/2023</h3>
+            <p>Studentische Hilfskraft an der Hochschule Düsseldorf</p>
         </div>
-        <div>
-            <label>Geschlecht:
-                <select name="geschlecht", id="geschlecht">
-                <option value="maennlich">männlich</option>
-                <option value="weiblich">weiblich</option>
-                <option value="divers">divers</option>
-            </select>
-            </label>
+
+        <div class="job">
+            <h3>10/2022 - 04/2023</h3>
+            <p>Pro Jump GmbH / Jump Galaxy Trampolinpark</p>
         </div>
-        <div>
-            <button type="button" onclick="alert('Daten übermittelt')">Senden</button>
+
+        <!-- Include other jobs as needed -->
+
+    </section>
+
+    <section id="ausbildung">
+        <h2>Ausbildung</h2>
+        <p><strong>09/2022 - aktuell</strong> Hochschule Düsseldorf - Data Science, AI und Intelligente Systeme (DAISY) B.Sc.</p>
+        <p><strong>10/2020 - 08/2022</strong> Westfälische Wilhelms-Universität Münster - Mathematik-Studium</p>
+        <p><strong>08/2012 - 06/2020</strong> Joseph-Haydn-Gymnasium Senden - Abitur (Note: 1,9), Leistungskurse: Mathematik und Biologie</p>
+    </section>
+
+    <section id="weitereTaetigkeiten">
+        <h2>Weitere Tätigkeiten</h2>
+
+        <div class="activity">
+            <h3>12/2023 – aktuell</h3>
+            <p>Ehrenamtlicher Mitarbeiter in Oxfam-Shop</p>
         </div>
-    </body>
+
+        <div class="activity">
+            <h3>10/2018 - 04/2019</h3>
+            <p>Teilnahme an der Arbeitsgemeinschaft „ganzheitliches Finanzmanagement“</p>
+        </div>
+
+        <!-- Include other activities as needed -->
+
+    </section>
+
+    <section id="kenntnisse">
+        <h2>Kenntnisse</h2>
+        <p><strong>Sprachkenntnisse:</strong></p>
+        <ul>
+            <li>Deutsch: Muttersprache</li>
+            <li>Englisch: sehr gute Kenntnisse</li>
+            <li>Russisch: Grundkenntnisse</li>
+        </ul>
+        <p><strong>Führerschein:</strong> Klasse B</p>
+    </section>
+
+    <section id="hobbys">
+        <h2>Hobbys und Interessen</h2>
+        <ul>
+            <li>Programmieren</li>
+            <li>Schach</li>
+            <li>Kraftsport</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jonah Gräfe. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
 </html>
