@@ -1,0 +1,125 @@
+---
+const pageTitle = "About Me"
+
+const identity = {
+    firstName: "Jonah",
+    lastName: "Gräfe",
+    country: "Germany",
+    degreeProgram: "Data Science, AI and Intelligent Systems BSc.",
+    eMail: "jonah.graefe@study.hs.duesseldorf.de",
+    birthday: "21.07.2002",
+}
+
+const personal_data = [
+    ["Name", identity.firstName + ' ' + identity.lastName],
+    ["E-Mail", identity.eMail],
+    ["Birthday", identity.birthday],
+    ["Home country", identity.country],
+    ["Degree program:", identity.degreeProgram]
+]
+
+const career = [
+    ["03/2024 - now", "Student assistant at the Düsseldorf University of Applied Sciences"],
+    ["09/2023 - 02/2024", "Tutor at the Düsseldorf University of Applied Sciences"],
+    ["05/2023 - 08/2023", "Student assistant at the Düsseldorf University of Applied Sciences"]
+]
+
+const education = [
+    ["09/2022 - now", "Düsseldorf University of Applied Sciences - Data Science, AI and Intelligent Systems BSc."],
+    ["10/2020 - 08/2022", "Westfälische Wilhelms-Universität Münster - Mathematics studies"],
+    ["08/2012 - 06/2020", "Joseph-Haydn-Gymnasium Senden - Abitur (Grade: 1,9)"]
+]
+
+const volunteer = [
+    ["12/2023 - now", "Volunteer in Oxfam store"],
+    ["10/2018 - 04/2019", "Participation in a 'integrated financial management' working group"]
+]
+
+const knowledge = {
+    language: [
+        ["German: Native language"],
+        ["English: Fluent"],
+        ["Russian: Basic level"]
+    ],
+    programming: [
+        ["Python: Proficient"],
+        ["JavaScript: Basic"],
+    ],
+}
+
+const hobbies = ["Programming", "Chess", "Weight training"]
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <a href="/cv/">About</a>
+    <a href="/blog/">Blog</a>
+
+    <header>
+        <h1>{pageTitle}</h1>
+    </header>
+
+    <section id="personal_data">
+        <h2>Personal Data</h2>
+        <ul>
+            {personal_data.map((item, index) => (<li>{item.join(": ")}</li>))}
+        </ul>
+    </section>
+
+    <section id="career">
+        <h2>Career</h2>
+
+        <ul>
+            {career.map((item, index) => (<li>{item.join(": ")}</li>))}
+        </ul>
+
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            {education.map((item, index) => (<li>{item.join(": ")}</li>))}
+        </ul>
+    </section>
+
+    <section id="volunteer ">
+        <h2>Volunteer and additional Activities</h2>
+
+        <ul>
+            {volunteer.map((item, index) => (<li>{item.join(": ")}</li>))}
+        </ul>
+
+
+    </section>
+
+    <section id="kenntnisse">
+        <h2>Other knowledge</h2>
+        <p><strong>Knowledge of languages:</strong></p>
+        <ul>
+            {knowledge.language.map((item, index) => (<li>{item.join(": ")}</li>))}
+        </ul>
+        <p><strong>Programming languages:</strong></p>
+        <ul>
+            {knowledge.programming.map((item, index) => (<li>{item.join(": ")}</li>))}
+        </ul>
+    </section>
+
+    <section id="hobbys">
+        <h2>Hobbies and interests</h2>
+        <ul>
+            {hobbies.map((item) => (<li>{item}</li>))}
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jonah Gräfe. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
