@@ -1,13 +1,15 @@
 ---
-const { platform, username } = Astro.props;
----
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+import { Icon } from "astro-icon/components"
 
+const { platform, username} = Astro.props;
+---
+
+<a href={`https://www.${platform}.com/${username}`}> <Icon name=github /> </a>
 <style>
     a {
       padding: 0.5rem 1rem;
+      font-size: 2rem;
       color: white;
-      background-color: #4c1d95;
       text-decoration: none;
     }
-  </style>
+</style>
