@@ -4,7 +4,7 @@ import { Icon } from "astro-icon/components"
 const { platform, username} = Astro.props;
 ---
 
-<a href={`https://www.${platform}.com/${username}`}> <Icon name=github /> </a>
+<a href={`https://www.${platform}.com/${username}`}> <Icon name={platform} /> </a>
 <style>
     a {
       padding: 0.5rem 1rem;
