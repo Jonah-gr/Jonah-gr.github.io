@@ -1,19 +1,15 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Hi, I'm Jonah ☕"
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/cv/">About</a>
-		<a href="/blog/">Blog</a>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <p>I am currently a student of Data Science and AI and live in Düsseldorf, Germany.
+    I am interested in everything related to software development, machine learning and 
+    other nerdy topics.
+  </p>
+  <h2>Projects</h2>
+  <ul>
+    <li><a href={`https://github.com/Jonah-gr/PyTorch-emotion-detection`}> PyTorch Emotion Detector </a></li>
+    <li><a href={`https://github.com/heyitsalina/ant_search_algorithm`}> Ant Search Algorithm </a></li>
+  </ul>
+</BaseLayout>
