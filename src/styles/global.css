@@ -2,7 +2,8 @@ html {
   background-color: #EAE7DC;
   color: #E98074;
   font-family: sans-serif;
-
+  min-height: 90%;
+  position: relative;
 }
 
 html.dark {
@@ -16,23 +17,29 @@ html.dark {
 
 body {
   margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
   padding: 1rem;
-  line-height: 1.5;
+  max-width: 80ch;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  min-height: 98vh;
 }
 
-footer{
+.content {
+  flex: 1;
+}
+
+footer {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   color: #272727;
+  height: 4rem;
+  width: 71%;
+  max-width: 80ch;
+  position: absolute;
+  bottom: 0;
 }
 
-html.dark footer{
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+html.dark footer {
   color: #fff;
 }
 
