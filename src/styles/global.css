@@ -21,7 +21,7 @@ body {
   max-width: 80ch;
   display: flex;
   flex-direction: column;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
   min-height: 98vh;
 }
 
@@ -32,15 +32,13 @@ body {
 footer {
   text-align: center;
   color: #272727;
-  height: 4rem;
+  height: 5rem;
   width: 71%;
   max-width: 80ch;
   position: absolute;
   bottom: 0;
-}
-
-html.dark footer {
-  color: #fff;
+  background-color: #EAE7DC;
+  padding-top: 1rem;
 }
 
 * {
