@@ -12,7 +12,11 @@ const { platform, username} = Astro.props;
       text-decoration: none;
     }
 
-    [data-icon="github"] {
-      font-size: 2rem;
+    [data-icon]{
+      transition: all .2s ease-in-out;
+    }
+
+    [data-icon]:hover{
+      transform: scale(1.2);
     }
 </style>
