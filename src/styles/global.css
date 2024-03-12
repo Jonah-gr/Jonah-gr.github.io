@@ -62,7 +62,7 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #E85A4F;
+  background-color: #a08e8d;
 }
   
 .nav-links {
@@ -82,6 +82,7 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: white;
 }
 
 .nav-links a:hover,
