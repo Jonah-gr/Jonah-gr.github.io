@@ -3,7 +3,23 @@ import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 import ThemeIcon from './ThemeIcon.astro';
 ---
-<header>
+<script>
+  function change_background() {
+    let lastScrollTop = 0;
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+      // document.getElementById('header').style.backgroundColor = "rgb(127, 127, 127)";
+      document.getElementById('header').style.backgroundImage = "url(../images/wave.svg)"
+    } else if (currentScrollTop === 0){
+      document.getElementById('header').style.backgroundImage = "";
+    }
+  }
+
+  window.addEventListener("scroll", change_background);
+</script>
+
+<header id="header">
   <nav>
     <Hamburger />
     <ThemeIcon />
