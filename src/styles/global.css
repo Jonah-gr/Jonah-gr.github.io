@@ -23,6 +23,12 @@ html.dark {
   color: #fff;
 }
 
+header {
+  position: fixed;
+  top: 1;
+  padding-left: 3rem;
+}
+
 body {
   margin: 0 auto;
   padding: 1rem;
