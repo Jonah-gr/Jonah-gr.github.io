@@ -8,8 +8,16 @@ import ThemeIcon from './ThemeIcon.astro';
     let lastScrollTop = 0;
     let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScrollTop > lastScrollTop) {
-      // document.getElementById('header').style.backgroundColor = "rgb(127, 127, 127)";
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    function isHamburgerVisible() {
+      const hamburgerStyle = window.getComputedStyle(hamburger);
+      
+      return hamburgerStyle.display === 'none';
+}
+
+    if (currentScrollTop > lastScrollTop && isHamburgerVisible()) {
       document.getElementById('header').style.backgroundImage = "url(../images/wave.svg)"
     } else if (currentScrollTop === 0){
       document.getElementById('header').style.backgroundImage = "";
@@ -26,3 +34,11 @@ import ThemeIcon from './ThemeIcon.astro';
     <Navigation />
   </nav>
 </header>
+
+<style>
+  header {
+    width: 720px;
+    height: 160px;
+    background-size: cover;
+  }
+</style>
