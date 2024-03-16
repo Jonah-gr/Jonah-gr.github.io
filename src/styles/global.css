@@ -28,6 +28,8 @@ header {
   top: 0;
   z-index: 999;
   padding-left: 3rem;
+  background-size: contain;
+  height: 30px;
 }
 
 body {
