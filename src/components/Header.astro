@@ -5,26 +5,33 @@ import ThemeIcon from './ThemeIcon.astro';
 ---
 <script>
   function change_background() {
-    let lastScrollTop = 0;
-    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    function isHamburgerVisible() {
-      const hamburgerStyle = window.getComputedStyle(hamburger);
-      
-      return hamburgerStyle.display === 'none';
-}
+    const hamburgerStyle = window.getComputedStyle(hamburger);
+    const navStyle = window.getComputedStyle(navLinks);
 
-    if (currentScrollTop > lastScrollTop && isHamburgerVisible()) {
-      document.getElementById('header').style.backgroundImage = "url(../images/wave.svg)"
-    } else if (currentScrollTop === 0){
-      document.getElementById('header').style.backgroundImage = "";
+    function isHamburgerVisible() {
+      return hamburgerStyle.display !== 'none';
+    }
+
+    function isNavOpen() {
+      return navStyle.display !== 'none';
+    }
+
+    if (isNavOpen() && isHamburgerVisible()) {
+      document.getElementById('header').style.height = '250px'
+      document.getElementById('header').style.backgroundColor = 'black';
+      // navStyle.backgroundColor = 'black';
+
+    } else {
+      document.getElementById('header').style.backgroundColor = '';
+      document.getElementById('header').style.height = '30px'
     }
   }
 
-  window.addEventListener("scroll", change_background);
+  window.addEventListener('resize', change_background);
+  window.addEventListener('click', change_background);
 </script>
 
 <header id="header">
@@ -34,11 +41,3 @@ import ThemeIcon from './ThemeIcon.astro';
     <Navigation />
   </nav>
 </header>
-
-<style>
-  header {
-    width: 650px;
-    height: 160px;
-    background-size: cover;
-  }
-</style>
