@@ -139,13 +139,13 @@ h1 {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  text-transform: uppercase;
   color: white;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #D8C3A5;
+  text-decoration: underline #ff9776;
+  text-decoration-thickness: 3px;
 }
 
 .expanded {
