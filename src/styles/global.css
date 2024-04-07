@@ -53,14 +53,50 @@ footer {
   margin: 4rem 0;
 }
 
+.footer__link {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
 .footer {
   cursor: default;
   list-style: none;
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
+.icon__btn {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+.icon__link {
+  display: flex;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.icon__link:hover {
+  border-color: var(--text-link);
+  transform: scale(1.2);
+}
+
+.git-icon {
+  content: url("/github.svg");
+}
+
+.kaggle-icon{
+  content: url("/kaggle.svg");
+}
+
+.dark .icon__link{
+  border: 2px solid #fdebf3;
+}
+
+.dark .git-icon{
+  content: url("/github-mark-white.svg");
 }
 
 h1 {
