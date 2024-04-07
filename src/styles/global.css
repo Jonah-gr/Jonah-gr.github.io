@@ -95,6 +95,11 @@ footer {
   border: 2px solid #fdebf3;
 }
 
+.dark .icon__link:hover {
+  border-color: var(--text-link);
+  transform: scale(1.2);
+}
+
 .dark .git-icon{
   content: url("/github-mark-white.svg");
 }
