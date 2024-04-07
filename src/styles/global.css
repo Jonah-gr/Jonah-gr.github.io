@@ -38,23 +38,24 @@ body {
   max-width: 80ch;
   display: flex;
   flex-direction: column;
-  padding-bottom: 6rem;
-  min-height: 100vh;
 }
 
 .content {
   flex: 1;
 }
 
-footer {
+.center {
   text-align: center;
-  color: #272727;
-  height: 6rem;
-  width: 71%;
-  max-width: 80ch;
-  position: absolute;
-  bottom: 0;
-  padding-top: 1rem;
+}
+
+footer {
+  margin: 4rem 0;
+}
+
+.footer {
+  cursor: default;
+  list-style: none;
+  padding: 0;
 }
 
 * {
