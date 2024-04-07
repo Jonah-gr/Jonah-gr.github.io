@@ -96,7 +96,7 @@ footer {
 }
 
 .dark .icon__link:hover {
-  border-color: #ff9776;
+  border-color: var(--text-link);
   transform: scale(1.2);
 }
 
