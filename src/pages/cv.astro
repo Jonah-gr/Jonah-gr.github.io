@@ -70,14 +70,14 @@ const hobbies = ["Programming", "Chess", "Weight training"]
 
 <BaseLayout pageTitle={pageTitle}>
     <section id="personal_data">
-        <h2>Personal Data</h2>
+        <h2>Personal data</h2>
         <ul>
             {personal_data.map((item, index) => (<li>{item.join(": ")}</li>))}
         </ul>
     </section>
 
     <section id="career">
-        <h2>Career</h2>
+        <h2>Career💼</h2>
 
         <ul>
             {career.map((item, index) => (<li>{item.join(": ")}</li>))}
@@ -86,14 +86,14 @@ const hobbies = ["Programming", "Chess", "Weight training"]
     </section>
 
     <section id="education">
-        <h2>Education</h2>
+        <h2>Education📚</h2>
         <ul>
             {education.map((item, index) => (<li>{item.join(": ")}</li>))}
         </ul>
     </section>
 
-    <section id="volunteer ">
-        <h2>Volunteer and additional Activities</h2>
+    <section id="volunteer">
+        <h2>Volunteer and additional activities🙋‍♂️</h2>
 
         <ul>
             {volunteer.map((item, index) => (<li>{item.join(": ")}</li>))}
@@ -102,24 +102,42 @@ const hobbies = ["Programming", "Chess", "Weight training"]
 
     </section>
 
-    <section id="knowledge">
-        <h2>Other knowledge</h2>
-        <p><strong>Knowledge of languages:</strong></p>
+    <section id="skills">
+        <h2>Skills👨‍💻</h2>
+        <p><strong>Languages:</strong></p>
         <ul>
             {knowledge.language.map((item, index) => (<li>{item.join(": ")}</li>))}
         </ul>
         <p><strong>Programming languages:</strong></p>
-        <ul>
-            {knowledge.programming.map((item, index) => (<li>{item.join(": ")}</li>))}
-        </ul>
+        <div class="skills">
+            <img class="skills__img" width="46" height="46" title="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Javaskript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"/>
+        </div>
+        <p><strong>Python libraries:</strong></p>
+        <div class="skills">
+            <img class="skills__img" width="46" height="46" title="NumPy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Pandas" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Matplotlib" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="PyTorch" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Scikit-learn" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"/>
+
+        </div>
         <p><strong>Other skills:</strong></p>
-        <ul>
-            {knowledge.other_skills.map((item) => (<li>{item}</li>))}
-        </ul>
+        <div class="skills">
+            <img class="skills__img" width="46" height="46" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="HTML" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Astro" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="LaTeX" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="Oracle SQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"/>
+            <img class="skills__img" width="46" height="46" title="MATLAB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg"/>
+        </div>
     </section>
 
     <section id="hobbies">
-        <h2>Hobbies and interests</h2>
+        <h2>Hobbies and interests♟</h2>
         <ul>
             {hobbies.map((item) => (<li>{item}</li>))}
         </ul>

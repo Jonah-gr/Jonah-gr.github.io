@@ -109,6 +109,15 @@ h1 {
   font-size: 2.5rem;
 }
 
+/* Skills */
+.skills {
+  margin-top: 8px;
+}
+
+.skills__img {
+  margin: 8px 4px;
+}
+
 /* nav styles */
 .hamburger {
   padding-right: 20px;
