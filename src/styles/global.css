@@ -91,6 +91,10 @@ footer {
   content: url("/kaggle.svg");
 }
 
+.linkedin-icon{
+  content: url("/linkedin.svg");
+}
+
 .dark .icon__link{
   border: 2px solid #fdebf3;
 }
