@@ -1,7 +1,15 @@
-import { defineConfig } from "astro/config";
-import preact from "@astrojs/preact";
-import icon from "astro-icon";
+import { defineConfig } from 'astro/config';
 
+import react from '@astrojs/react';
+
+import tailwind from '@astrojs/tailwind';
+
+// https://astro.build/config
 export default defineConfig({
-  site: "https://Jonah-gr.github.io",
+  integrations: [
+    react(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
 });
