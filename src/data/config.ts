@@ -2,7 +2,7 @@ export const config = {
   siteTitle: 'Jonah Gräfe',
   description: 'Hi, I am Jonah',
   author: 'Jonah Gräfe',
-  contactEmail: 'jjonah.graefe@study.hs-duesseldorf.de',
+  contactEmail: 'jonah.graefe@study.hs-duesseldorf.de',
   keywords: 'portfolio, business intelligence, data analysis, Power BI Reports, Software Engineer, Web Developer',
   favicon: '/favicon.svg',
   social: {

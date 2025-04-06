@@ -1,7 +1,7 @@
 export const heroData = {
   name: 'Jonah Gräfe',
-  title: 'Data Scientist',
-  description: 'I am ...',
+  title: 'Future Data Scientist',
+  description: 'Student at the University of Applied Sciences Düsseldorf who is currently doing an internship at Porsche.',
   profilePicture: '/me.jpg',
   skills: [
     'Python',
@@ -12,7 +12,7 @@ export const heroData = {
     'SQL',
     'Docker',
     'Cloud Computing',
-    'Power BI',
+    'MS Power BI',
     'LaTeX',
   ],
   contact: {

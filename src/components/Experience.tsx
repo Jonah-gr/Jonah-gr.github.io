@@ -29,6 +29,7 @@ export default function ExperienceSection() {
                       </p>
                     </div>
                     <Badge variant="secondary">{job.dates}</Badge>
+                    {/* <img src='https://upload.wikimedia.org/wikipedia/de/thumb/7/70/Porsche_Logo.svg/387px-Porsche_Logo.svg.png?20170910085420'/> */}
                   </div>
                 </CardHeader>
                 <CardContent>
