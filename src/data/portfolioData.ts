@@ -40,11 +40,6 @@ export const projects: Project[] = [
     tags: ["Python", "Game Theory", "Reinforcement Learning", "Deep Learning"],
     details: {
       details: "The Iterated Prisoner's Dilemma (IPD) is a classic problem in game theory that models the tension between cooperation and competition in repeated interactions. In each round, two players independently decide either to cooperate or to defect. I wanted to explore and show that RL agents are capable of breaking through the dilemma and learning behaviors like generosity, forgiveness, and kindness that are the keys to long-term rewards.",
-      // solution: "Developed a Python",
-      // impact: [
-      //   "Reduced reporting time from 5 days to a few hours, improving efficiency.",
-      //   "Minimized errors in financial reports, ensuring data accuracy for decision-making."
-      // ]
     }
   },
   {
@@ -59,11 +54,47 @@ export const projects: Project[] = [
     tags: ["Python", "Machine Learning", "Image Processing", "Deep Learning"],
     details: {
       details: "",
-      // solution: "Developed a Python",
-      // impact: [
-      //   "Reduced reporting time from 5 days to a few hours, improving efficiency.",
-      //   "Minimized errors in financial reports, ensuring data accuracy for decision-making."
-      // ]
+    }
+  },
+  {
+    id: 4,
+    title: "SFM-Image-Matcher",
+    summary: "A tool to select the images whose camera poses are closest to given 3d points. This works through prior reconstruction using Structure from Motion (SfM).",
+    images: [
+      "/sfm_poses.png",
+      "/sfm_flowers.gif"
+    ],
+    tags: ["Python", "Photogrammetry", "Image Processing"],
+    details: {
+      details: "",
+    }
+  },
+  {
+    id: 5,
+    title: "Ant Search Algorithm",
+    summary: "A kivy application that tries to mimic the foraging behavior of ants for food.",
+    images: [
+      "/ant_search_example.png",
+      "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/basic_features.gif?raw=true",
+      "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/advanced_features.gif?raw=true",
+    ],
+    tags: ["Python", "Machine Learning", "Image Processing", "Deep Learning"],
+    details: {
+      details: "",
+    }
+  },
+  {
+    id: 6,
+    title: "Image Recommender",
+    summary: "An analysis of chess games with regard to the fraud allegations against Hans Moke Niemann in 2022 and visualization in MS Power BI. The project involved data collection through web scraping and the evaluation of each move by Stockfish 11 to calculate the AI match.",
+    images: [
+      "/niemann1.png",
+      "/niemann2.png",
+      "/niemann3.png",
+    ],
+    tags: ["MS Power BI"],
+    details: {
+      details: "",
     }
   }
 ];

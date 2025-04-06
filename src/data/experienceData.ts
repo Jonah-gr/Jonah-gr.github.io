@@ -7,7 +7,7 @@ export type Job = {
 
 export const jobs: Job[] = [
   {
-    title: "Internship",
+    title: "Data Science Intern for ADAS/AD",
     company: "Porsche AG",
     dates: "03/2025 - today",
     description: [
@@ -28,7 +28,7 @@ export const jobs: Job[] = [
     ]
   },
   {
-    title: "Internship",
+    title: "Student Intern for Interior Sensing",
     company: "Aptiv",
     dates: "04/2024 - 07/2024",
     description: [
@@ -37,7 +37,7 @@ export const jobs: Job[] = [
     ]
   },
   {
-    title: "Internship",
+    title: "Student Intern for Computer Vision",
     company: "eekual bionic GmbH",
     dates: "04/2024 - 07/2024",
     description: [
