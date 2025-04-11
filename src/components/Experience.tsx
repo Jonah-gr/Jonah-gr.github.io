@@ -29,15 +29,27 @@ export default function ExperienceSection() {
                       </p>
                     </div>
                     <Badge variant="secondary">{job.dates}</Badge>
-                    {/* <img src='https://upload.wikimedia.org/wikipedia/de/thumb/7/70/Porsche_Logo.svg/387px-Porsche_Logo.svg.png?20170910085420'/> */}
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <ul className="list-inside list-disc space-y-1 text-muted-foreground">
-                    {job.description.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
+                  <div className="flex justify-between items-start gap-4">
+                    <ul className="list-inside list-disc space-y-1 text-muted-foreground flex-1">
+                      {job.description.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                    {job.image && (
+                      <img
+                        src={job.image}
+                        alt={`${job.company} logo`}
+                        style={{
+                          width: job.imageWidth || 64,
+                          height: job.imageHeight || 64,
+                        }}
+                        className="object-contain rounded-md"
+                      />
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             </div>
