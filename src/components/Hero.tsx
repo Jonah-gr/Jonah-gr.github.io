@@ -27,47 +27,66 @@ const Hero = () => {
       stars.current = Array.from({ length: 200 }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 3,
+        size: Math.random() * 2 + 1,
         opacity: Math.random() * 0.5 + 0.2,
-        speed: Math.random() * 0.4 + 0.1,
       }));
     };
+    
 
     // Animation loop
     const animate = () => {
       if (!ctx || !canvas) return;
-
+    
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
       const isDarkMode = document.documentElement.classList.contains('dark');
-      
+    
+      // Repel from mouse
       stars.current.forEach((star) => {
-        star.y += star.speed;
-        if (star.y > canvas.height) {
-          star.y = 0;
-          star.x = Math.random() * canvas.width;
-        }
-
         const dx = star.x - mousePosition.current.x;
         const dy = star.y - mousePosition.current.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         const maxDistance = 100;
-
+    
         if (distance < maxDistance) {
           const angle = Math.atan2(dy, dx);
           const push = (1 - distance / maxDistance) * 2;
           star.x += Math.cos(angle) * push;
           star.y += Math.sin(angle) * push;
         }
-
-        ctx.fillStyle = isDarkMode ? `rgba(255, 255, 255, ${star.opacity})` : `rgba(0, 0, 0, ${star.opacity * 0.7})`;
+      });
+    
+      // Draw lines between close stars
+      for (let i = 0; i < stars.current.length; i++) {
+        for (let j = i + 1; j < stars.current.length; j++) {
+          const a = stars.current[i];
+          const b = stars.current[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+    
+          if (distance < 100) {
+            ctx.strokeStyle = isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+    
+      // Draw stars
+      stars.current.forEach((star) => {
+        ctx.fillStyle = isDarkMode
+          ? `rgba(255, 255, 255, ${star.opacity})`
+          : `rgba(0, 0, 0, ${star.opacity * 0.7})`;
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fill();
       });
-
+    
       requestAnimationFrame(animate);
-    };
+    };    
 
     const handleMouseMove = (e: MouseEvent) => {
       mousePosition.current = {
