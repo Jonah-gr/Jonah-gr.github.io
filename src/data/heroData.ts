@@ -16,8 +16,8 @@ export const heroData = {
     'LaTeX',
   ],
   contact: {
-    github: 'https://github.com/johndoe',
-    linkedin: 'https://www.linkedin.com/in/johndoe/',
-    email: 'johndoe@example.com'
+    github: 'https://github.com/jonah-gr',
+    linkedin: 'https://www.linkedin.com/in/jonah-gr/',
+    email: 'jonah.graefe@study.hs-duesseldorf.de'
   }
 };

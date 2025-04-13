@@ -13,7 +13,7 @@ export const footerData = {
     },
     {
       name: 'Email',
-      url: 'jonah.graefe@study.hs-duesseldorf.de',
+      url: 'mailto:jonah.graefe@study.hs-duesseldorf.de',
       icon: 'Mail'
     }
   ],
