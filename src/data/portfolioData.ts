@@ -94,7 +94,7 @@ export const projects: Project[] = [
       "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/basic_features.gif?raw=true",
       "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/advanced_features.gif?raw=true",
     ],
-    tags: ["Python", "Machine Learning", "Image Processing", "Deep Learning"],
+    tags: ["Python", "Kivy"],
     details: {
       details: "This ant food search simulation offers an intuitive GUI to interact with the simulation. It allows oyu to directly influence the simulation environment and observe the complex behaviors of ants in their quest for food.",
     },
