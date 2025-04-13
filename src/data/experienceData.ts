@@ -14,8 +14,8 @@ export const jobs: Job[] = [
     company: "Porsche AG",
     dates: "03/2025 - today",
     description: [
-      "point 1",
-      "point 2"
+      "Support in the development of solutions for camera perception",
+      "Analysis of traffic sign recognition data",
     ],
     image: "https://upload.wikimedia.org/wikipedia/de/thumb/2/2d/Porsche_Wappen.svg/315px-Porsche_Wappen.svg.png?20190521143657",
     imageWidth: 100,
@@ -26,10 +26,9 @@ export const jobs: Job[] = [
     company: "University of Applied Sciences Düsseldorf",
     dates: "05/2023 - 02/2025",
     description: [
+      "Tutoring for students",
       "Assistance with organizational and technical preparation",
       "Correcting students' assignments and submissions",
-      "Give tutorials to students",
-      "Help students with their homework",
       "Supervise laboratory"
     ],
     image: "https://upload.wikimedia.org/wikipedia/commons/7/76/20150501_HSD_Logo_rot_transparent.png",
