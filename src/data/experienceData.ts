@@ -32,7 +32,7 @@ export const jobs: Job[] = [
       "Supervise laboratory"
     ],
     image: "https://upload.wikimedia.org/wikipedia/commons/7/76/20150501_HSD_Logo_rot_transparent.png",
-    imageWidth: 150,
+    imageWidth: 120,
     imageHeight: 150,
   },
   {
@@ -43,9 +43,9 @@ export const jobs: Job[] = [
       "Programming tool to analyze and enhance a metric for evaluating images created by generative AI",
       "Conduct a small study and presenting the findings"
     ],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Aptiv_logo.svg/257px-Aptiv_logo.svg.png",
-    imageWidth: 200,
-    imageHeight: 80,
+    image: "/aptiv_logo.jpeg",
+    imageWidth: 100,
+    imageHeight: 100,
   },
   {
     title: "Student Intern for Computer Vision",
