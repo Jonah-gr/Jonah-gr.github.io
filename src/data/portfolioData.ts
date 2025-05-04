@@ -87,12 +87,30 @@ export const projects: Project[] = [
   },
   {
     id: 5,
+    title: "Requiem of Dread",
+    summary: "A free-to-play roguelike game that we developed and marketed as a group of 4 students in few months. Developed using the Godot Engine and published on Steam.",
+    images: [
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3447360/header.jpg?t=1739992637",
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3447360/ss_2454c634195473a11ff4af5cae3441b8981c14d9.600x338.jpg?t=1739992637",
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3447360/ss_e2b7e599833170bb228e90f40c3ed58768123459.600x338.jpg?t=1739992637"
+    ],
+    tags: ["Python", "Godot", "Game Development"],
+    details: {
+      details: "The minimalist gameplay and retro pixel graphics make it easy to get started and let you dive deep into the dark worlds of Requiem of Dread. Embark on an adventure in the darkness and defeat enemies and bosses of increasing difficulty. Fight your way through 3 hand-crafted dungeon maps, from haunted graveyards to monster-filled forests to the empty tombs in the pyramids. Beware of what you'll find there! We have composed a melodic horror soundtrack to accompany you through the thrilling experience. This is a student project created in Godot 4.3. In a group of four students, we had two months to learn and customize different techniques and create this alpha version. The music is handcrafted and composed to immerse the player in a world of death, destruction and unease. The bosses will do anything to keep you on your toes, so don't take too much time to enjoy their animations. The skill tree allows you to spend your collected coins on buffs. Open the skill tree, go on a shopping spree and come back to finally kill the Grim Reaper!",
+    },
+    externalLink: {
+      title: "Requiem of Dread on Steam",
+      url: "https://store.steampowered.com/app/3447360/Requiem_of_Dread/",
+    }
+  },
+  {
+    id: 6,
     title: "Ant Search Algorithm",
     summary: "A kivy application that tries to mimic the foraging behavior of ants for food.",
     images: [
       "/ant_search_example.png",
-      "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/basic_features.gif?raw=true",
-      "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/advanced_features.gif?raw=true",
+      // "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/basic_features.gif?raw=true",
+      // "https://github.com/heyitsalina/ant_search_algorithm/blob/main/images/advanced_features.gif?raw=true",
     ],
     tags: ["Python", "Kivy"],
     details: {
@@ -104,8 +122,8 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 6,
-    title: "Image Recommender",
+    id: 7,
+    title: "Chess Fraud Analysis",
     summary: "An analysis of chess games with regard to the fraud allegations against Hans Moke Niemann in 2022 and visualization in MS Power BI.",
     images: [
       "/niemann1.png",
