@@ -24,7 +24,19 @@ const Hero = () => {
 
     // Initialize stars
     const initStars = () => {
-      stars.current = Array.from({ length: 200 }, () => ({
+      const screenArea = window.innerWidth * window.innerHeight;
+
+      // Pick number of stars based on screen area
+      let starCount: number;
+      if (screenArea < 500_000) {
+        starCount = 50; // Small phones
+      } else if (screenArea < 1_000_000) {
+        starCount = 100; // Tablets / small laptops
+      } else {
+        starCount = 200; // Desktop
+      }
+
+      stars.current = Array.from({ length: starCount }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: Math.random() * 2 + 1,
