@@ -10,12 +10,12 @@ export type Job = {
 
 export const jobs: Job[] = [
   {
-    title: "Data Science Intern for ADAS/AD",
+    title: "Data Science Intern - Camera Perception for ADAS/AD",
     company: "Porsche AG",
     dates: "03/2025 - today",
     description: [
-      "Support in the development of solutions for camera perception",
-      "Analysis of traffic sign recognition data",
+      "Created a proof of concept to analyze and identify false positives in traffic sign recognition data",
+      "Developed a Databricks data pipeline to process and build a Voxel51 dataset aggregating all camera data collected from test drives",
     ],
     image: "https://upload.wikimedia.org/wikipedia/de/thumb/2/2d/Porsche_Wappen.svg/315px-Porsche_Wappen.svg.png?20190521143657",
     imageWidth: 100,

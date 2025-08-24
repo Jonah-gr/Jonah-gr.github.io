@@ -1,9 +1,9 @@
 export const config = {
   siteTitle: 'Jonah Gräfe',
-  description: 'Hi, I am Jonah',
+  description: 'Jonah Gräfe - Portfolio',
   author: 'Jonah Gräfe',
   contactEmail: 'jonah.graefe@study.hs-duesseldorf.de',
-  keywords: 'portfolio, business intelligence, data analysis, Power BI Reports, Software Engineer, Web Developer',
+  keywords: 'AI, Machine Learning, Data Science, Python',
   favicon: '/favicon.svg',
   social: {
     linkedin: 'https://www.linkedin.com/in/jonah-gr/',
