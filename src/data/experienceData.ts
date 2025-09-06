@@ -10,12 +10,22 @@ export type Job = {
 
 export const jobs: Job[] = [
   {
+    title: "Bachelor Thesis Researcher - Camera Perception and LLMs for ADAS/AD",
+    company: "Porsche AG",
+    dates: "09/2025 - present",
+    description: [],
+    image: "https://upload.wikimedia.org/wikipedia/de/thumb/2/2d/Porsche_Wappen.svg/315px-Porsche_Wappen.svg.png?20190521143657",
+    imageWidth: 100,
+    imageHeight: 100,
+  },
+  {
     title: "Data Science Intern - Camera Perception for ADAS/AD",
     company: "Porsche AG",
-    dates: "03/2025 - today",
+    dates: "03/2025 - 08/2015",
     description: [
-      "Created a proof of concept to analyze and identify false positives in traffic sign recognition data",
-      "Developed a Databricks data pipeline to process and build a Voxel51 dataset aggregating all camera data collected from test drives",
+      "Ownership of data preprocessing and data analysis in an annotation proof-of-concept for image data",
+      "Implementation of a scalable data pipeline to convert large camera and bus recordings into a cloud-based data management tool",
+      "Support the evaluation of operational design domains (ODD) for novel sensor concepts using map-based data"
     ],
     image: "https://upload.wikimedia.org/wikipedia/de/thumb/2/2d/Porsche_Wappen.svg/315px-Porsche_Wappen.svg.png?20190521143657",
     imageWidth: 100,

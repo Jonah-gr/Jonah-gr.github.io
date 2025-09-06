@@ -107,6 +107,16 @@ const Hero = () => {
       };
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+    if (e.touches.length > 0) {
+      mousePosition.current = {
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY,
+      };
+    }
+  };
+
+
     const handleResize = () => {
       setCanvasSize();
       initStars();
@@ -117,10 +127,12 @@ const Hero = () => {
     animate();
 
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('resize', handleResize);
     };
   }, []);

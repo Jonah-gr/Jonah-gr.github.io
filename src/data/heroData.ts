@@ -1,7 +1,7 @@
 export const heroData = {
   name: 'Jonah Gräfe',
-  title: 'Future Data Scientist',
-  description: 'Student at the University of Applied Sciences Düsseldorf who is currently doing an internship at Porsche.',
+  title: 'Data Science | Machine Learning | AI ',
+  description: 'Bachelor Thesis Researcher at Porsche AG',
   profilePicture: '/me.jpg',
   skills: [
     'Python',
