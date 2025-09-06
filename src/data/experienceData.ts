@@ -21,7 +21,7 @@ export const jobs: Job[] = [
   {
     title: "Data Science Intern - Camera Perception for ADAS/AD",
     company: "Porsche AG",
-    dates: "03/2025 - 08/2015",
+    dates: "03/2025 - 08/2025",
     description: [
       "Ownership of data preprocessing and data analysis in an annotation proof-of-concept for image data",
       "Implementation of a scalable data pipeline to convert large camera and bus recordings into a cloud-based data management tool",
