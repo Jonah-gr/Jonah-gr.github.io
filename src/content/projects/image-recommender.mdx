@@ -1,0 +1,27 @@
+---
+title: "Image Recommender"
+summary: "A tool to recommend similar images to a query — by deep features, color histograms, or YOLO bounding boxes."
+date: 2024-12-10
+tags: ["Python", "Machine Learning", "Image Processing", "Deep Learning"]
+repo: "https://github.com/AlhaririAnas/Image-recommender"
+---
+
+## What it does
+
+Given a query image, the recommender returns the most similar images from a large catalogue, using one of three configurable similarity signals:
+
+- **Deep features** — embeddings derived from the logits of an Inception V3 model.
+- **Color histograms** — fast, lightweight, useful for stylistic matches.
+- **YOLO bounding boxes** — for object-driven similarity.
+
+## Scale & speed
+
+Tested on a corpus of **~500,000 images**, with very precise results. Clustering on the embedding space keeps the search fast — the query never needs to be compared against every image in the dataset.
+
+## Why Inception V3 logits
+
+Using the logit layer (instead of an earlier feature map) gave a representation that captured high-level semantic content well, leading to recommendations that were more visually meaningful than raw color- or shape-based methods alone.
+
+## Stack
+
+Python, PyTorch, Inception V3, YOLO, OpenCV, clustering for fast retrieval.

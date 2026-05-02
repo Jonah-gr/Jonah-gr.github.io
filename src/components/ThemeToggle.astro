@@ -1,0 +1,39 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+  type="button"
+  id="theme-toggle"
+  aria-label="Toggle color theme"
+  title="Toggle color theme"
+  class="inline-flex size-9 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white"
+>
+  <Icon name="lucide:sun" class="size-5 dark:hidden" aria-hidden="true" />
+  <Icon name="lucide:moon" class="hidden size-5 dark:block" aria-hidden="true" />
+  <span class="sr-only">Toggle color theme</span>
+</button>
+
+<script>
+  const btn = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+
+  function applyTheme(theme: "light" | "dark") {
+    root.classList.toggle("dark", theme === "dark");
+  }
+
+  btn?.addEventListener("click", () => {
+    const isDark = root.classList.contains("dark");
+    const next = isDark ? "light" : "dark";
+    localStorage.setItem("theme", next);
+    applyTheme(next);
+  });
+
+  // Sync with system preference if the user hasn't explicitly chosen.
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
+  media.addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+  });
+</script>

@@ -1,0 +1,31 @@
+---
+title: "FID-Evaluator"
+summary: "Analyzing how the Fréchet Inception Distance behaves when reducing the dimensionality of the embedding space via PCA."
+date: 2025-06-15
+featured: true
+tags: ["Python", "Machine Learning", "PyTorch", "Generative AI", "Research"]
+repo: "https://github.com/Jonah-gr/FID-Evaluator"
+---
+
+## Background
+
+The Fréchet Inception Distance (FID) is a standard metric for evaluating images produced by GANs and diffusion models. It compares the distribution of features extracted from real and generated images by the Inception V3 network — typically in a 2048-dimensional embedding space.
+
+## Goal
+
+Make FID more sensitive to subtle errors in generated images by **reducing the dimensionality of the embedding space** with principal component analysis (PCA), so the dimensionality is better matched to the effective complexity of the real-image distribution.
+
+## Approach
+
+1. Extract Inception V3 features for the real and synthesized image sets.
+2. Fit PCA on the real-image features and project both sets to a series of progressively smaller spaces.
+3. Add controlled noise to the synthesized images and recompute FID at each PCA dimensionality.
+4. Track the **percentage increase** in FID relative to the unnoised baseline at each dimensionality — a direct measure of sensitivity.
+
+## Findings
+
+Reducing the embedding dimensionality led to a more accurate representation of the visual quality of the generated images: relative FID changes became more pronounced and tracked perceptual differences more closely than the standard 2048-dimensional FID.
+
+## Stack
+
+Python, PyTorch, NumPy, scikit-learn (PCA), Inception V3.

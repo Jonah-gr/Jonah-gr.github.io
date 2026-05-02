@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+import { site } from "~/data/site";
+
+interface Props {
+  size?: "sm" | "md";
+  class?: string;
+}
+const { size = "md", class: className = "" } = Astro.props;
+
+const sizeClass = size === "sm" ? "size-4" : "size-5";
+const padClass = size === "sm" ? "p-2" : "p-2.5";
+
+const links = [
+  site.socials.github && {
+    href: site.socials.github,
+    label: "GitHub",
+    icon: "lucide:github",
+  },
+  site.socials.linkedin && {
+    href: site.socials.linkedin,
+    label: "LinkedIn",
+    icon: "lucide:linkedin",
+  },
+  site.socials.googleScholar && {
+    href: site.socials.googleScholar,
+    label: "Google Scholar",
+    icon: "lucide:graduation-cap",
+  },
+  site.socials.twitter && {
+    href: site.socials.twitter,
+    label: "Twitter / X",
+    icon: "lucide:twitter",
+  },
+  site.email && {
+    href: `mailto:${site.email}`,
+    label: "Email",
+    icon: "lucide:mail",
+  },
+].filter((x): x is { href: string; label: string; icon: string } => Boolean(x));
+---
+
+<ul class={`flex items-center gap-1 ${className}`}>
+  {
+    links.map((l) => (
+      <li>
+        <a
+          href={l.href}
+          aria-label={l.label}
+          target={l.href.startsWith("mailto:") ? undefined : "_blank"}
+          rel={l.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+          class={`inline-flex items-center justify-center rounded-md ${padClass} text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white`}
+        >
+          <Icon name={l.icon} class={sizeClass} aria-hidden="true" />
+        </a>
+      </li>
+    ))
+  }
+</ul>

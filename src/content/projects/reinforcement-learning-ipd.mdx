@@ -1,0 +1,28 @@
+---
+title: "Reinforcement Learning in the Iterated Prisoner's Dilemma"
+summary: "Training RL agents to break the cooperate-vs-defect dilemma against a tournament of classical strategies."
+date: 2025-03-20
+featured: true
+tags: ["Python", "Game Theory", "Reinforcement Learning", "Deep Learning"]
+repo: "https://github.com/Jonah-gr/Reinforcement-Learning-IPD"
+---
+
+## Background
+
+The Iterated Prisoner's Dilemma (IPD) is a classic problem in game theory that models the tension between cooperation and competition in repeated interactions. In each round, two players independently decide to either **cooperate** or **defect**, and their payoffs depend on the joint action.
+
+## Question
+
+Can RL agents discover behaviors like **generosity, forgiveness, and kindness** — the long-known keys to long-term cooperation — purely from rewards, when matched against classical IPD strategies (Tit-for-Tat, Grim Trigger, Pavlov, Random, etc.)?
+
+## Approach
+
+I implemented a tournament environment for the IPD and trained reinforcement-learning agents to optimize their strategies against a pool of classical agents. Both the action policies and the resulting interaction dynamics were tracked over training and across opponents.
+
+## Outcome
+
+The RL agents converged on cooperative-leaning policies, learning to exploit defectors while sustaining mutual cooperation against retaliators. The experiment shows that the principles that make Tit-for-Tat-family strategies successful can emerge from reward-driven learning alone.
+
+## Stack
+
+Python, PyTorch, custom IPD environment, classical strategy implementations.

@@ -1,0 +1,25 @@
+---
+title: "Chess Fraud Analysis"
+summary: "Investigating the 2022 Hans Niemann fraud allegations through Stockfish-based AI-match analysis and Power BI visualization."
+date: 2023-03-10
+tags: ["MS Power BI", "Python", "Data Analysis"]
+---
+
+## Question
+
+In 2022, Hans Moke Niemann faced public allegations of cheating in chess. Could a data-driven analysis of his games surface anything anomalous compared to peers?
+
+## Approach
+
+- **Data collection** via web scraping of public game databases.
+- **Move-by-move evaluation** with **Stockfish 11** to compute an AI-match score for every move played.
+- **Comparison set** of two reference players: Magnus Carlsen (the world's best at the time) and Vincent Keymer (a comparable rising player).
+- **Interactive visualization** of the results in Microsoft Power BI dashboards.
+
+## What the data showed
+
+Niemann's measured playing strength was **not exceptional** compared to the reference players — yet his Elo rating climbed faster than either of them over the analyzed period, the most interesting anomaly the analysis surfaced.
+
+## Stack
+
+Python (web scraping, Stockfish 11 integration), Microsoft Power BI.

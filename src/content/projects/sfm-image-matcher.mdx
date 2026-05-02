@@ -1,0 +1,23 @@
+---
+title: "SfM Image Matcher"
+summary: "Selecting the images whose camera poses are closest to specified 3D points, using prior Structure-from-Motion reconstruction."
+date: 2024-10-05
+tags: ["Python", "Photogrammetry", "Image Processing"]
+repo: "https://github.com/Jonah-gr/SfM-Image-Matcher"
+---
+
+## Problem
+
+Given a large collection of images and a set of target 3D points, which images "see" each point best? Manual selection is slow and subjective.
+
+## Approach
+
+The SfM Image Matcher uses a prior **Structure-from-Motion** reconstruction to recover camera poses for the entire image collection. With each camera pose known, the tool can analyze any incoming 3D point and return the images whose cameras are closest to (and best oriented for) that point.
+
+## What you get
+
+A small Python tool that streamlines image selection for downstream tasks like 3D reconstruction refinement, photogrammetric inspection, or dataset curation.
+
+## Stack
+
+Python, Structure from Motion, image processing utilities.

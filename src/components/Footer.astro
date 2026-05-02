@@ -1,0 +1,32 @@
+---
+import SocialLinks from "~/components/SocialLinks.astro";
+import { site } from "~/data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-zinc-200/60 py-10 dark:border-zinc-800/60">
+  <div
+    class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 text-sm text-zinc-500 sm:flex-row sm:justify-between sm:px-6 lg:px-8 dark:text-zinc-400"
+  >
+    <p>
+      © {year} {site.name}. Built with
+      <a
+        href="https://astro.build"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-medium text-zinc-700 hover:text-accent-600 dark:text-zinc-300 dark:hover:text-accent-400"
+        >Astro</a
+      >
+      &
+      <a
+        href="https://tailwindcss.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-medium text-zinc-700 hover:text-accent-600 dark:text-zinc-300 dark:hover:text-accent-400"
+        >Tailwind CSS</a
+      >.
+    </p>
+    <SocialLinks size="sm" />
+  </div>
+</footer>

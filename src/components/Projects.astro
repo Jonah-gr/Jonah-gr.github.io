@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import SectionHeading from "~/components/SectionHeading.astro";
+import ProjectCard from "~/components/ProjectCard.astro";
+
+const all = await getCollection("projects", ({ data }) => !data.draft);
+const projects = all.sort((a, b) => {
+  if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
+  return b.data.date.getTime() - a.data.date.getTime();
+});
+---
+
+<section
+  id="projects"
+  class="border-t border-zinc-200/60 bg-zinc-50/60 py-20 sm:py-24 dark:border-zinc-800/60 dark:bg-zinc-900/30"
+>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <SectionHeading
+      eyebrow="Selected work"
+      title="Projects"
+      description="A few recent things I've built — click through for the full case study."
+    />
+
+    {
+      projects.length === 0 ? (
+        <p class="text-zinc-500 dark:text-zinc-400">
+          No projects yet. Add MDX files under <code class="font-mono">src/content/projects/</code>.
+        </p>
+      ) : (
+        <ul class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {projects.map((project) => (
+            <li class="h-full">
+              <ProjectCard project={project} />
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</section>
