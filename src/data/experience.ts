@@ -22,7 +22,9 @@ export const experience: Experience[] = [
     start: "2026-04",
     end: null,
     highlights: [
-      "Working on amber's Business-AI platform — enterprise search, AI assistants, and AI agents — that turns internal company knowledge into precise, secure answers.",
+      "Working on multimodal features for amber's Business AI platform, with a focus on image-related user experiences.",
+      "Contributing to features involving internal image search and the integration of visual content from web search results.",
+      "Supporting the generation and display of visual outputs, including charts and graphics created in a Python sandbox environment.",
     ],
     stack: ["Python", "LLMs", "RAG", "Vector Search", "AI Agents"],
   },
